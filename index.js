@@ -8,8 +8,6 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-console.log('environment=', process.env.NODE_ENV);
-
 app.use(cors());
 app.use(helmet());
 
@@ -27,6 +25,6 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
-// setInterval(() => {
-// 	http.get(`http://${ process.env.PROJECT_DOMAIN }.glitch.me/`);
-// }, 280000);
+setInterval(() => {
+	http.get(`https://api-cities.herokuapp.com/?keyword=rome`);
+}, 280000);
