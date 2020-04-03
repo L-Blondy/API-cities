@@ -2,7 +2,7 @@
 
 Get cities `latitude`, `longitude` and `timezone` searching by partial or complete city name
 
-### API Endpoint : https://api-cities.herokuapp.com
+#### API Endpoint URL: https://api-cities.herokuapp.com
 
 ## With Fetch API
 ``` javascript
