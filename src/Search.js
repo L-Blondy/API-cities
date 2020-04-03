@@ -59,6 +59,7 @@ class Search {
 				population: match[ 2 ],
 				lat: match[ 3 ],
 				lon: match[ 4 ],
+				tz: match[ 5 ]
 			};
 		});
 	}
@@ -66,9 +67,12 @@ class Search {
 	sort() {
 		const { sortBy } = this.opts;
 
-		if (!sortBy || sortBy === 'population') {
+		if (sortBy === 'alphabet')
+			return;
+
+		else if (!sortBy || sortBy === 'population') {
 			this.matches.sort((a, b) => b.population - a.population);
-		};
+		}
 	}
 
 	slice(n) {

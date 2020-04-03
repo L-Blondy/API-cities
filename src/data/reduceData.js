@@ -26,7 +26,7 @@ function reduceRaw() {
 
 function get_data() {
 	const res = cities
-		.map(({ name, country, population, id, lat, lon }) => (`${ name && name.toLowerCase() }_${ country }_${ population }_${ lat }_${ lon }`))
+		.map(({ name, country, population, id, lat, lon, tz }) => (`${ name && name.toLowerCase() }_${ country }_${ population }_${ lat }_${ lon }_${ tz }`))
 		.sort();
 	fs.writeFile('src/data/data.json', JSON.stringify(res));
 };
