@@ -29,6 +29,6 @@ app.get('/', cors(), (req, res) => {
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
-setInterval(() => {
-	http.get(`https://api-cities.herokuapp.com/?keyword=rome`);
-}, 280000);
+// setInterval(() => {
+// 	http.get(`https://api-cities.herokuapp.com/?keyword=rome`);
+// }, 280000);
