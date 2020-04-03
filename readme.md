@@ -1,3 +1,9 @@
+# Cities API
+
+Get cities `latitude`, `longitude` and `timezone` searching by partial or complete city name
+
+### API Endpoint : https://api-cities.herokuapp.com
+
 ## With Fetch API
 ``` javascript
 fetch(`${ url }?keyword=${ keyword }`)
@@ -32,6 +38,9 @@ For example a city:
 {
 	"name": "Rome",
 	"country" : "IT",
-	
+	"population": "2318895"
+	"lat": "41.89193"
+	"lon": "12.51133"
+	"tz": "Europe/Rome" //timezone
 }
 ``` 
