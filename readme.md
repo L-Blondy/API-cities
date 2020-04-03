@@ -32,15 +32,22 @@ orderBy | `'population'` | order results by 'population' or 'alphabet'.
 ## Data structure:
 
 An array containing the matching cities is returned.
+
 For example a city:
 
 ``` javascript
-{
-	"name": "Rome",
-	"country" : "IT",
-	"population": "2318895"
-	"lat": "41.89193"
-	"lon": "12.51133"
-	"tz": "Europe/Rome" //timezone
-}
+[
+	{
+		"name": "Rome",
+		"country" : "IT",
+		"population": "2318895"
+		"lat": "41.89193"
+		"lon": "12.51133"
+		"tz": "Europe/Rome" //timezone
+	}
+	
+	...
+]
 ``` 
+
+Thanks to `geonames.org` for providing the data
