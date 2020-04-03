@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "deploy": "git add . && git commit -am 1"
+    "deploy": "git add . && git commit -am 1 && git push heroku master"
   },
   "author": "",
   "license": "ISC",
