@@ -8,18 +8,22 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-app.use(cors());
 app.use(helmet());
+app.use(cors());
 
-app.get('/', (req, res) => {
+app.get('/', cors(), (req, res) => {
 	const { keyword, maxResults, sortBy } = req.query;
 
-	const newSearch = new Search(keyword, {
-		sortBy,
-		maxResults
-	});
+	try {
+		const newSearch = new Search(keyword, {
+			sortBy,
+			maxResults
+		});
 
-	res.send(newSearch.matches);
+		res.send(newSearch.matches);
+	} catch {
+		res.send('Something went wrong, please check you request parameters');
+	}
 });
 
 
